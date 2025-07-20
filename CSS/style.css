@@ -1,29 +1,40 @@
-body{
-    min-height: 100vh;
-    display:flex;
-    flex-direction: column;
+body {
+  font-family: cursive;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-main{
-    flex-grow: 1;
+main {
+  flex-grow: 1;
 }
 
-.btnTarea{
-    background-color: rgb(247, 150, 166);
-    color: black;
+.btnTarea {
+  background-color: rgb(247, 150, 166);
+  color: black;
 }
 
-.btnTarea:hover{
-    background-color: rgb(228, 60, 88);
-    color: whitesmoke;
+.btnTarea:hover {
+  background-color: rgb(228, 60, 88);
+  color: whitesmoke;
 }
 
-.btnElimiar{
-    background-color: fuchsia;
-    color: whitesmoke
+.btnElimiar {
+  background-color: fuchsia;
+  color: whitesmoke;
 }
 
-.btnElimiar :hover{
-    background-color: whitesmoke;
-    color: fuchsia;
+.btnElimiar:hover {
+  background-color: whitesmoke;
+  color: fuchsia;
+}
+
+#inputTarea {
+  border: 1px solid #f142a8;
+}
+
+#inputTarea:focus {
+  outline: none; /* para sacar el borde azul */
+  box-shadow: 0px 0px 10px #f142a8;
+  border-color: #f142a8 !important;
 }
