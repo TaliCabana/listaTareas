@@ -16,5 +16,14 @@ main{
 .btnTarea:hover{
     background-color: rgb(228, 60, 88);
     color: whitesmoke;
+}
 
+.btnElimiar{
+    background-color: fuchsia;
+    color: whitesmoke
+}
+
+.btnElimiar :hover{
+    background-color: whitesmoke;
+    color: fuchsia;
 }
