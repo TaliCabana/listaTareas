@@ -1,9 +1,9 @@
 /*3 - Crea una web con bootstrap y js, que contenga un botón input donde se pueda cargar una tarea y un botón que al ser presionado agregue dicha tarea a una lista, cada elemento ingresado en la lista debe poder ser eliminado con un botón creado para ese fin.
-*/
+ */
 // Referencias al formulario y a la lista
 const form = document.getElementById("formTarea");
 const inputTarea = document.getElementById("inputTarea"); // se lee la tarea
-const listaTareas = document.getElementById("listaTareas");  //  se muestra la tarea 
+const listaTareas = document.getElementById("listaTareas"); //  se muestra la tarea
 
 // Evento al enviar el formulario
 form.addEventListener("submit", function (e) {
@@ -18,8 +18,9 @@ form.addEventListener("submit", function (e) {
   }
 
   // Creación de cada elemento <li> para la lista
-  const nuevaTarea = document.createElement("li");  // agrega un linea del tipo "lista"
-  nuevaTarea.className = "list-group-item d-flex justify-content-between align-items-center"; // para agregar el * de la lista
+  const nuevaTarea = document.createElement("li"); // agrega un linea del tipo "lista"
+  nuevaTarea.className =
+    "list-group-item d-flex justify-content-between align-items-center"; // para agregar el * de la lista
   nuevaTarea.textContent = textoTarea; // el input agregado por el usuario
 
   // Crear botón de eliminar
