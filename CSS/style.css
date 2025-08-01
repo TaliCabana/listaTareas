@@ -1,3 +1,5 @@
+
+
 body {
   font-family: cursive;
   min-height: 100vh;
@@ -39,6 +41,16 @@ main {
   border-color: #f142a8 !important;
 }
 
-.list-group-item {
-  border: 1px solid #f142a8;
+input[type="checkbox"]:checked {
+  background-color: #f142a8;
+  background-position: center;
+  border: #f142a8;
+  box-shadow: 0px 0px 10px #f142a8;
+}
+
+.itemTarea {
+  border: 2px solid #f142a8;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
 }

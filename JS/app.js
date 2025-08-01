@@ -10,7 +10,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault(); // Evita que se recargue la página
 
   const textoTarea = inputTarea.value.trim();
-
+  
   // Validación básica
   if (textoTarea === "") {
     alert("⚠ Por favor ingresá una tarea.");
@@ -20,8 +20,16 @@ form.addEventListener("submit", function (e) {
   // Creación de cada elemento <li> para la lista
   const nuevaTarea = document.createElement("li"); // agrega un linea del tipo "lista"
   nuevaTarea.className =
-    "list-group-item d-flex justify-content-between align-items-center"; // para agregar el * de la lista
-  nuevaTarea.textContent = textoTarea; // el input agregado por el usuario
+    "list-group-item d-flex justify-content-between align-items-center itemTarea"; // para agregar el * de la lista
+
+  // crear checkbox
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.className = "form-check-input me-2";
+
+  // Crear span con el texto, para poder agrupar con el checkbox
+  const spanTexto = document.createElement("span");
+  spanTexto.textContent =textoTarea;
 
   // Crear botón de eliminar
   const btnEliminar = document.createElement("button");
@@ -33,7 +41,14 @@ form.addEventListener("submit", function (e) {
     listaTareas.removeChild(nuevaTarea);
   });
 
+// Agrupar checkbox y texto en un contenedor
+const contenedorTexto = document.createElement("div");
+contenedorTexto.className = "d-flex align-items-center";
+contenedorTexto.appendChild(checkbox);
+contenedorTexto.appendChild(spanTexto);
+
   // Agregar el botón al <li>
+  nuevaTarea.appendChild(contenedorTexto);
   nuevaTarea.appendChild(btnEliminar);
 
   // Agregar el <li> a la <ul>
