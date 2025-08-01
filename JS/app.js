@@ -20,7 +20,7 @@ form.addEventListener("submit", function (e) {
   // Creación de cada elemento <li> para la lista
   const nuevaTarea = document.createElement("li"); // agrega un linea del tipo "lista"
   nuevaTarea.className =
-    "list-group-item d-flex justify-content-between align-items-center"; // para agregar el * de la lista
+    "list-group-item d-flex justify-content-between align-items-center itemTarea"; // para agregar el * de la lista
 
   // crear checkbox
   const checkbox = document.createElement("input");
